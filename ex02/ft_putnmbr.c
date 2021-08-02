@@ -25,9 +25,11 @@ void	ft_putnbr(int nb)
 	ft_putchar((nb % 10) + '0');
 	return ;
 }
+/*
 int	main(void)
 {
 	int i;
 	i = 991;
 	ft_putnbr(i);
 }
+*/
