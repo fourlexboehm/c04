@@ -4,28 +4,32 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-
-void	ft_putnbr(int nb);
+void	ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return
+		return ;
 	}
 	if (nb < 0)
 	{
 		ft_putchar('-');
 		nb = -nb;
 	}
-	if (nb > 9)
+	if (nb <= 9)
 	{
-	ft_putnbr(nb / 10	nb = nb % 10	
+		ft_putchar(nb + '0');
+		return ;
 	}
-
+	ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + '0');
+	return ;
 }
+/*
 int	main(void)
 {
 	int i;
-	i = 5
-	ft_putnbr(i)
+	i = 991;
+	ft_putnbr(i);
 }
+*/
